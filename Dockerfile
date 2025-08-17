@@ -1,18 +1,19 @@
 # Multi-stage build for Spring Boot application
-FROM maven:3.8.4-openjdk-17 AS build
+FROM gradle:7.6.1-jdk17 AS build
 
 # Set working directory
 WORKDIR /app
 
-# Copy pom.xml and download dependencies
-COPY pom.xml .
-RUN mvn dependency:go-offline -B
+# Copy gradle files and download dependencies
+COPY build.gradle settings.gradle gradlew ./
+COPY gradle ./gradle
+RUN gradle dependencies --no-daemon
 
 # Copy source code
 COPY src ./src
 
 # Build the application
-RUN mvn clean package -DskipTests
+RUN gradle build -x test --no-daemon
 
 # Runtime stage
 FROM eclipse-temurin:17-jre-jammy
@@ -21,7 +22,7 @@ FROM eclipse-temurin:17-jre-jammy
 WORKDIR /app
 
 # Copy the built JAR from build stage
-COPY --from=build /app/target/*.jar app.jar
+COPY --from=build /app/build/libs/*.jar app.jar
 
 # Expose port
 EXPOSE 8080
