@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kodder.tools.KodderBackendApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-08-17T10:40:47.434Z" hostname="Avinashs-MacBook-Air.local" time="0.399">
+  <properties/>
+  <testcase name="contextLoads()" classname="com.kodder.tools.KodderBackendApplicationTests" time="0.399"/>
+  <system-out><![CDATA[16:10:46.384 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.kodder.tools.KodderBackendApplicationTests]: KodderBackendApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+16:10:46.443 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.kodder.tools.KodderBackendApplication for test class com.kodder.tools.KodderBackendApplicationTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.6)
+
+2025-08-17T16:10:46.648+05:30  INFO 65299 --- [kodder-backend] [    Test worker] c.k.tools.KodderBackendApplicationTests  : Starting KodderBackendApplicationTests using Java 24.0.1 with PID 65299 (started by avinashkumar in /Users/avinashkumar/Developer/Backend/converter)
+2025-08-17T16:10:46.649+05:30  INFO 65299 --- [kodder-backend] [    Test worker] c.k.tools.KodderBackendApplicationTests  : No active profile set, falling back to 1 default profile: "default"
+2025-08-17T16:10:47.425+05:30  INFO 65299 --- [kodder-backend] [    Test worker] c.k.tools.KodderBackendApplicationTests  : Started KodderBackendApplicationTests in 0.9 seconds (process running for 1.592)
+]]></system-out>
+  <system-err><![CDATA[WARNING: A Java agent has been loaded dynamically (/Users/avinashkumar/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy-agent/1.14.16/4a451ee6484abac3a498df0f3b33ed00a6fced4d/byte-buddy-agent-1.14.16.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+]]></system-err>
+</testsuite>
